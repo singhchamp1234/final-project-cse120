@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #092f44;
+}
+
+.container {
+  width: 30%;
+
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.description {
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  color: #5b5b5b;
+  font-family: arial;
+  margin-top: 30px;
+  position: relative;
+  background: #efefef;
+  text-align: center;
+  margin-left: 50px;
+  border-radius: 10px;
+}
+
+.carousel-container {
+  width: 45%;
+  margin: auto;
+  border: 5px solid #efefef;
+  overflow: hidden;
+  position: relative;
+  margin-right: 300px;
+  margin-top: -500px;
+  border-radius: 10px;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 90%;
+  height: 430px;
+}
+
+#prevBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 5%;
+  font-size: 30px;
+  color: white;
+}
+
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 5%;
+  font-size: 30px;
+  color: white;
+}
+
+.video {
+  margin-top: 20px;
+  position: relative;
+  left: 500px;
+  border: 5px solid #efefef;
+  border-radius: 10px;
+}
+
+.video video {
+  position: relative;
+  top: -65px;
+  outline: none;
+}
+
+.feedback-rating {
+  position: relative;
+  padding-bottom: 50px;
+  left: -250px;
+  transform: translate(-50%, -50%) rotateY(900deg);
+  top: -40px;
+}
+
+.feedback-heading {
+  position: relative;
+  top: -60px;
+  color: #5b5b5b;
+  font-style: arial;
+  background: #efefef;
+  width: 400px;
+  padding: 10px;
+  left: -80px;
+  border-radius: 10px;
+  text-align: center;
+}
+.rating-wrapper input {
+  display: none;
+}
+
+.rating-wrapper label {
+  display: inline-block;
+  width: 90px;
+  position: relative;
+  cursor: pointer;
+}
+
+.rating-wrapper label:before {
+  content: "\2605";
+  position: absolute;
+  font-size: 50px;
+  display: inline-block;
+  color: #ddd;
+  top: 0;
+  left: 0;
+}
+
+.rating-wrapper label:after {
+  content: "\2605";
+  position: absolute;
+  font-size: 50px;
+  display: inline-block;
+  color: yellow;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rating-wrapper label:hover:after,
+.rating-wrapper label:hover ~ label:after,
+.rating-wrapper input:checked ~ label:after {
+  opacity: 1;
+}
+
+.feedback-heading {
+  display: relative;
+  margin-left: 140px;
+  margin-top: -300px;
+}
+
+.contact-form {
+  width: 95%;
+  max-width: 400px;
+  background: #f1f1f1;
+  position: absolute;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  text-align: center;
+  box-shadow: 0 0 20px #000000b3;
+  left: 60px;
+  margin-top: -20px;
+}
+
+.contact-form h1 {
+  margin-top: 0;
+  font-weight: 200;
+}
+
+.txtb {
+  border: 1px solid gray;
+  margin: 8px 0;
+  padding: 12px 18px;
+  border-radius: 8px;
+}
+
+.txtb label {
+  display: block;
+  text-align: left;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.txtb input,
+.txt textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  margin-top: 6px;
+}
+.btn-send {
+  display: inline-block;
+  background: #092f44;
+  padding: 14px 0;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .description {
+    margin: 0px;
+    padding: 5px;
+    font-size: 16px;
+    display: inline-block;
+  }
+  .carousel-container {
+    height: 300px;
+    margin-right: 14px;
+    margin-top: -690px;
+    width: 55%;
+  }
+  .container {
+    width: 320px;
+    height: 700px;
+    padding: 10px;
+  }
+  .contact-form {
+    margin-top: -450px;
+    font-size: 16px;
+    max-width: 800px;
+    margin-left: -40px;
+    padding: 10px 10px;
+  }
+  .feedback-heading {
+    font-size: 10px;
+    width: 308px;
+    margin-top: -260px;
+    margin-left: 95px;
+  }
+  .rating-wrapper label {
+    margin-left: -168px;
+    padding: 110px;
+    margin-top: 220px;
+  }
+  video {
+    width: 65% !important;
+    height: 300px !important;
+    margin-left: -165px;
+    margin-top: 25px;
+  }
+  .video {
+    border: none;
+  }
+}
